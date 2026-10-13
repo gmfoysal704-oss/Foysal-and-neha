@@ -1,0 +1,255 @@
+
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ফয়সালের ভালোবাসার মানুষের জন্য ❤️</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: sans-serif;
+  background: linear-gradient(135deg, #ffd6e7, #fff0f5, #ffb6d2);
+  color: #8f174b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+.card {
+  position: relative;
+  z-index: 2;
+  background: rgba(255,255,255,0.91);
+  width: 100%;
+  max-width: 430px;
+  min-height: 440px;
+  padding: 28px 20px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 10px 35px #c94e7b35;
+  border: 1px solid white;
+}
+
+h1 { color: #e52e79; font-size: 29px; }
+h2 { color: #c62968; font-size: 23px; }
+p { font-size: 17px; line-height: 1.9; }
+
+.heart {
+  position: fixed;
+  bottom: -40px;
+  animation: floatUp 7s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) rotate(0); opacity: 0; }
+  15% { opacity: 0.8; }
+  100% { transform: translateY(-110vh) rotate(35deg); opacity: 0; }
+}
+
+.screen { display: none; animation: appear .5s ease; }
+.screen.active { display: block; }
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.big-heart {
+  font-size: 85px;
+  margin: 15px 0;
+  animation: beat 1s infinite;
+}
+
+@keyframes beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+
+button {
+  border: none;
+  border-radius: 30px;
+  padding: 13px 23px;
+  margin: 8px 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.next {
+  background: linear-gradient(45deg, #ff3885, #e91e63);
+  color: white;
+  box-shadow: 0 4px 12px #e91e6340;
+}
+
+.back {
+  background: #ffe2ed;
+  color: #a52258;
+}
+
+.note {
+  background: #fff0f5;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 15px 0;
+}
+
+.progress {
+  font-size: 13px;
+  color: #b75a7d;
+  margin-bottom: 20px;
+}
+
+.small { font-size: 14px; }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <div class="progress" id="progress">ধাপ ১ / ৮</div>
+
+  <section class="screen active">
+    <div class="big-heart">F💗N</div>
+    <h1> নদী শুধু  তোমার  জন্য ❤️</h1>
+    <p>তোমার জন্য আমার একটা ছোট্ট সারপ্রাইজ আছে।</p>
+    <p>মন দিয়ে দেখবে কিন্তু! 🥰</p>
+    <button class="next" onclick="go(1)">শুরু করো ❤️ →</button>
+  </section>
+
+  <section class="screen">
+    <h2>আমি তোমাকে কেন ভালোবাসি? 💕</h2>
+    <p>🌷 তোমার হাসি আমায় পাগল করে দেয়।</p>
+    <p>💗 তোমার কথা আমার মন ভালো করে দেয়।</p>
+    <p>🫶 তুমি যখন হাসি দাও আমার পৃথিবী থমকে যায়।</p>
+    <p>❤️ তুমি আমার কাছে সত্যিই অনেক মূল্যবান।</p>
+    <p>🥹নদী তুমি কি কোন ভাবে আমার হয়ে থাকতে পারবা না</p>
+    
+    <button class="back" onclick="go(-1)">← পিছনে</button>
+    <button class="next" onclick="go(1)">পরবর্তী →</button>
+  </section>
+
+  <section class="screen">
+    <h2>তোমার সাথে কথা বলার ছোট্ট মুহূর্তগুলো 🌸</h2>
+    <div class="big-heart">💑</div>
+    <p>তোমার সঙ্গে প্রতিটি সুন্দর মুহূর্ত আমার কাছে অমূল্য।</p>
+    <p>তোমার সঙ্গে অনেক সুন্দর স্মৃতি তৈরি করতে চাই। ✨</p>
+    <p>তুমি থাকবে আমার হয়ে 🥀❤️ </p>
+    <button class="back" onclick="go(-1)">← পিছনে</button>
+    <button class="next" onclick="go(1)">পরবর্তী →</button>
+  </section>
+
+  <section class="screen">
+    <h2>তোমার জন্য আমার কিছু স্বপ্ন 💭</h2>
+    <div class="note">
+      💖 তোমার মুখে হাসি দেখতে চাই।<br><br>
+      🌷 তোমার ভালো সময়ে পাশে থাকতে চাই।<br><br>
+      🫶 মন খারাপের দিনেও তোমার কথা শুনতে চাই।<br><br>
+      🤲দোয়া করি আল্লাহ তায়ালা তোমকে সব সময় সুস্থ রাখেন।<br><br>
+      ❤️ একসঙ্গে সুন্দর স্মৃতি তৈরি করতে চাই।
+    </div>
+    <button class="back" onclick="go(-1)">← পিছনে</button>
+    <button class="next" onclick="go(1)">পরবর্তী →</button>
+  </section>
+
+  <section class="screen">
+    <h2>তোমাকে একটা প্রশ্ন করি নদী ? 💌</h2>
+    <div class="big-heart">💖</div>
+    <p>নদী, তুমি কি আমাকে ভালোবাসতে পারোনা ?</p>
+    <button class="next" onclick="answer('হ্যাঁ ❤️')">হ্যাঁ ❤️</button>
+    <button class="back" onclick="answer('তাবুও তুমি আমাকে ভালোবাসবেনা 💗')">না 💗</button>
+    <p class="small" id="answerText"></p>
+    <button class="back" onclick="go(-1)">← পিছনে</button>
+    <button class="next" onclick="go(1)">পরবর্তী →</button>
+  </section>
+
+  <section class="screen">
+    <h2>নদী, তোমার জন্য কিছু কথা 💌</h2>
+    <div class="note">
+      প্রিয় নদী,<br><br>
+      তুমি আমার জীবনের একটি বিশেষ মানুষ।
+      তোমাকে নিয়ে আমার অনেক সুন্দর স্বপ্ন আছে।
+      আমি চাই, আমরা একে অপরকে বুঝি,
+      সম্মান করি এবং কঠিন সময়েও
+      একে অপরের পাশে থাকি।<br><br>
+      তোমার হাসি সবসময় সুন্দর থাকুক। 🌷
+    </div>
+    <p>অনেক অনেক ভালোবাসি তোমায় নদী! ❤️</p>
+    <button class="back" onclick="go(-1)">← পিছনে</button>
+    <button class="next" onclick="go(1)">শেষ চমক →</button>
+  </section>
+
+  <section class="screen">
+    <h2>শেষ কথা, নদী ❤️</h2>
+    <div class="big-heart">💝</div>
+    <p>পৃথিবীর সব সুন্দর ফুলের মধ্যে গোলাপ যেমন বিশেষ, তেমনি অনেক মানুষের ভিড়ে তুমিও আমার কাছে বিশেষ। 🌹</p>
+    <p>তোমার দিনগুলো আনন্দে ভরে উঠুক।</p>
+    <p>ভালো থেকো, হাসিখুশি থেকো। 🥰</p>
+    <button class="back" onclick="go(-1)">← পিছনে</button>
+    <button class="next" onclick="go(1)">আরেকটি চমক ✨</button>
+  </section>
+
+  <section class="screen">
+    <div class="big-heart">❤️‍🔥</div>
+    <h1>আমি তোমাকে ভালোবাসি, নদী!</h1>
+    <p>এই ছোট্ট ওয়েবসাইটটা শুধু তোমার জন্য তৈরি করলাম । 💗</p>
+    <p>তোমার হাসিই হোক আমার সবচেয়ে প্রিয় দৃশ্য। 🌹</p> 
+    <p>— তোমার ভালোবাসার মানুষ ফয়সাল  ❤️</p>
+    <button class="next" onclick="restart()">🔄 আবার দেখো</button>
+  </section>
+</div>
+
+<script>
+let current = 0;
+const screens = document.querySelectorAll(".screen");
+
+function go(direction) {
+  screens[current].classList.remove("active");
+  current += direction;
+
+  if (current < 0) current = 0;
+  if (current >= screens.length) current = screens.length - 1;
+
+  screens[current].classList.add("active");
+  document.getElementById("progress").textContent =
+    "ধাপ " + (current + 1) + " / " + screens.length;
+}
+
+function restart() {
+  screens[current].classList.remove("active");
+  current = 0;
+  screens[current].classList.add("active");
+  document.getElementById("progress").textContent =
+    "ধাপ ১ / " + screens.length;
+}
+
+function answer(message) {
+  document.getElementById("answerText").textContent =
+    "তোমার অনুভূতিকে সম্মান করি। " + message;
+}
+
+function makeHeart() {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.textContent = ["💗", "💕", "💖", "❤️", "🌸"][
+    Math.floor(Math.random() * 5)
+  ];
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (16 + Math.random() * 22) + "px";
+  heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 10000);
+}
+
+setInterval(makeHeart, 650);
+</script>
+
+</body>
+</html>
